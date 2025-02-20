@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanna Canta 2025</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .book-container {
+            display: block;
+            margin: auto;
+            padding: 20px;
+        }
+        .page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px; /* Adds space between each image */
+        }
+        .page img {
+            width: 260px; /* Adjust image size */
+            margin: 10px; /* Adjust space between images */
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container" id="book-container"></div>
+    
+    <script>
+        const bookContainer = document.getElementById('book-container');
+        
+        for (let i = 1; i <= 16; i++) {
+            const img = document.createElement('img');
+            img.src = 'images/1.png'.replace('1', i);
+            img.alt = `Image ${i}`;
+            
+            const page = document.createElement('div');
+            page.classList.add('page');
+            page.appendChild(img);
+            
+            bookContainer.appendChild(page); // Append each image one below the other
+        }
+    </script>
+</body>
+</html>
